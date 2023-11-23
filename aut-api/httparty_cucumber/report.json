@@ -1,0 +1,210 @@
+[
+  {
+    "id": "consultar-produtos-através-da-api",
+    "uri": "features/specifications/produtos.feature",
+    "keyword": "Funcionalidade",
+    "name": "Consultar produtos através da API",
+    "description": "Como um aplicação de serviço\nQuero enviar requisições para para obter produtos\npara verificar se as informações são apresentadas corretamente",
+    "line": 3,
+    "tags": [
+      {
+        "name": "@crud",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 10,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "a API Listar Produtos definida",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/produtos.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31300
+            }
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31800
+            }
+          }
+        ]
+      },
+      {
+        "id": "consultar-produtos-através-da-api;listar-todos-os-produtos",
+        "keyword": "Cenario",
+        "name": "Listar todos os produtos",
+        "description": "",
+        "line": 14,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "a requisicao for enviada",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/produtos.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 594112700
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "posso visualizar as informações de todos os produtos",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/produtos.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112480900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@crud",
+            "line": 2
+          },
+          {
+            "name": "@todos_produtos",
+            "line": 13
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35100
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 10,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "a API Listar Produtos definida",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/produtos.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13800
+            }
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22500
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28600
+            }
+          }
+        ]
+      },
+      {
+        "id": "consultar-produtos-através-da-api;listar-produto-aleatoriamente",
+        "keyword": "Cenario",
+        "name": "Listar produto aleatoriamente",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "a requisição para obter detalhes de um produto aleatório é enviada",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/produtos.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110035300
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "posso visualizar as informações deste produto",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/produtos.rb:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96437700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@crud",
+            "line": 2
+          },
+          {
+            "name": "@produto_aleatorio",
+            "line": 19
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22100
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

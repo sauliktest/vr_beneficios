@@ -1,0 +1,33 @@
+require 'rspec/core/rake_task'
+require 'fileutils'
+require 'launchy'
+
+REPORT_PATH = 'reports'
+
+RSpec::Core::RakeTask.new do |t|
+  t.pattern = 'spec/*_test.rb'
+  t.rspec_opts = "--format html --out #{File.join(File.dirname(__FILE__), REPORT_PATH, 'aut_api_results.html')}"
+end
+
+task :open_report do
+  Launchy.open("#{REPORT_PATH}/aut_api_results.html")
+end
+
+task :run_tests_and_open_report => [:spec, :open_report]
+
+task :clean_reports do
+  FileUtils.rm_rf(REPORT_PATH) if File.exist?(REPORT_PATH)
+end
+
+# Após a execução dos testes, adiciona a data e hora no corpo do relatório
+at_exit do
+  report_path = "#{REPORT_PATH}/aut_api_results.html"
+
+  if File.exist?(report_path)
+    timestamp = Time.now.strftime("%d/%m/%Y %H:%M:%S")
+
+    File.open(report_path, 'a') do |file|
+      file.puts "<p>Relatório gerado em: #{timestamp}</p>"
+    end
+  end
+end

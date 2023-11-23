@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'rspec'
+gem 'httparty'
+gem 'capybara'
+gem 'report_builder', '~> 1.8.0'
+gem 'cucumber'
+gem 'selenium-webdriver'
+gem 'chromedriver-helper'
+gem 'factory_bot'
+gem 'faker'
+gem 'ffi'
+gem 'json'

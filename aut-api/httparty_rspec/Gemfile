@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+source "https://rubygems.org"
+
+ gem 'rspec'
+ gem 'rake'
+ gem 'httparty'
+ gem 'rspec_html_formatter'
+ gem 'launchy'
+ gem 'rspec-html-formatter'

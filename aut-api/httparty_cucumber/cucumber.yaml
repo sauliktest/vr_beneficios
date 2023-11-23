@@ -1,0 +1,27 @@
+---
+default: -p pretty -p html -p json -p firefox -p homologacao -p sprint --retry 1 --publish
+default: -p html -p bdd -p json
+html: --format html --out=test_results/Resultado_Testes.html
+dot: --format progress
+bdd: --format pretty
+json: --format json -o "report.json"
+default: --publish-quiet
+
+# browsers
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
+firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
+safari: BROWSER=safari
+ie: BROWSER=ie
+edge: BROWSER=edge
+selenium_headless: BROWSER=firefox
+
+
+# environments
+desenvolvimento: TEST_ENV=DEV
+producao: TEST_ENV=PROD
+homologacao: TEST_ENV=HLG
+
+#sprint
+sprint: TEST_SPRINT=O1

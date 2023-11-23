@@ -2,8 +2,8 @@
 @crud
 Funcionalidade: Consultar produtos através da API
 Como um aplicação de serviço
-Quero enviar requisições para para obter produtos
-para verificar se as informações são apresentadas corretamente
+Quero enviar requisições para obter produtos
+e verificar se as informações são apresentadas corretamente
 
 
 Contexto:
